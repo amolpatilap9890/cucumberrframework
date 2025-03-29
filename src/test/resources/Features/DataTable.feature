@@ -5,9 +5,9 @@ Feature: databtable concept
     Given user should be on log in page
     When user enters valid credentials and click on log in button
     When user need to create multiple leads and validate based on dataset
-    |Tata   | TCS       |
-    |Nadela | Microsoft |
-    |Pichai | Google    |
-    |Musk   | Tesla     |
-    |Musk   | SpaceX    |
+    |Tata   | TCS       | CEO     |
+    |Nadela | Microsoft | CEO     |
+    |Pichai | Google    | CEO     |
+    |Musk   | Tesla     | CEO     |
+    |Musk   | SpaceX    | Founder |
     And close browser

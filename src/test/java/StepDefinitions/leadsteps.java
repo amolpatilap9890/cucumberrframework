@@ -9,10 +9,10 @@ import java.util.List;
 public class leadsteps extends basesteps{
 
 
-    @When("user fill the last name and company and click on save button")
+    @When("user fill the last name and company, designation and click on save button")
     public void fill_data()
     {
-    ldp.createlead("Patil" , "TCS");
+    ldp.createlead("Patil" , "TCS", "SME");
     }
 
     @Then("user click on new lead link")
@@ -34,8 +34,9 @@ public class leadsteps extends basesteps{
         for (int i = 0; i<ls.size(); i++)
         {
             ldp.clickNewLead();
-            ldp.createlead(ls.get(i).get(0),ls.get(i).get(1));
-            ldp.verifycreatelead(ls.get(i).get(0),ls.get(i).get(1));
+            ldp.createlead(ls.get(i).get(0),ls.get(i).get(1),ls.get(i).get(2));
+            ldp.verifycreatelead(ls.get(i).get(0),ls.get(i).get(1),ls.get(i).get(2));
+            ldp.verifycreatelead(ls.get(i).get(0),ls.get(i).get(1),ls.get(i).get(2));
 
         }
     }

@@ -7,6 +7,6 @@ Feature: lead functionality
 
     Scenario: create lead
       When user click on new lead link
-      And user fill the last name and company and click on save button
+      And user fill the last name and company, designation and click on save button
       Then lead should be created and validated successfully
       And close browser
