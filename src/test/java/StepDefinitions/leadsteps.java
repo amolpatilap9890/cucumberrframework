@@ -40,4 +40,30 @@ public class leadsteps extends basesteps{
 
         }
     }
+
+    @Then("user will open leads page")
+    public void user_will_open_leads_page() {
+        ldp.clickleads();
+    }
+
+    @Then("user will delete the entered data")
+    public void user_will_delete_the_entered_data()
+    {
+        ldp.search("TCS");
+        ldp.srcclick();
+        ldp.selectbox();
+        ldp.entrydelete();
+    }
+
+    @Then("user will log out")
+    public void logout()
+    {
+        hp.clicklogout();
+    }
+
+//    @Then("close browser")
+//    public void quite()
+//    {
+//        driver.quit();
+//    }
 }

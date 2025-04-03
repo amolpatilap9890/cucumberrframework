@@ -3,7 +3,7 @@ Feature: Log in functionality
   Background:
     Given user should be on log in page
 
-    @india
+
   Scenario: valid log in
 
     When user enters valid credentials and click on log in button
@@ -17,7 +17,7 @@ Feature: Log in functionality
     Then user can see error message
     And close browser
 
-    @datadriven
+
   Scenario Outline: invalid log in with different data
 
     When user enters invalid credentials user name as "<userid>" and password as "<password>" and click on log in button

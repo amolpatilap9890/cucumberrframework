@@ -1,6 +1,6 @@
 Feature: databtable concept
 
-  @india
+
   Scenario: datatable implementation
     Given user should be on log in page
     When user enters valid credentials and click on log in button
@@ -10,4 +10,6 @@ Feature: databtable concept
     |Pichai | Google    | CEO     |
     |Musk   | Tesla     | CEO     |
     |Musk   | SpaceX    | Founder |
+    Then user will open leads page
+    Then user will delete the entered data
     And close browser
