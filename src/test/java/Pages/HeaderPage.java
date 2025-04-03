@@ -13,6 +13,7 @@ public class HeaderPage {
 
     public HeaderPage(WebDriver driver)
     {
+
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
@@ -20,7 +21,7 @@ public class HeaderPage {
     @FindBy(linkText = "Home")
     WebElement lnk_home;
 
-    @FindBy (linkText = "Logout")
+    @FindBy (xpath = "//a[text()=\"Logout\"]")
     WebElement lnk_logout;
 
     @FindBy (linkText = "New Lead")

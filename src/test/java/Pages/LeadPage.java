@@ -27,6 +27,18 @@ public class LeadPage extends HeaderPage{
     @FindBy (name = "button")
     WebElement save;
 
+    @FindBy (xpath = "//input[@name=\"company\"][@type=\"text\" and @size=\"10\"]")
+    WebElement search;
+
+    @FindBy (xpath = "//input[@title=\"Search [Alt+Q]\"]")
+    WebElement searchclick;
+
+    @FindBy (xpath = "//input[@type=\"checkbox\"][@name=\"selectall\"]")
+    WebElement checkbox;
+
+    @FindBy (xpath = "//input[@value=\"Delete\"]")
+    WebElement delete;
+
     public void createlead (String txt_lname, String txt_comp, String txt_position)
     {
         lname.sendKeys(txt_lname);
@@ -41,4 +53,25 @@ public class LeadPage extends HeaderPage{
         driver.findElement(By.xpath("//td[text()='Company:']/following::td[1][text()='"+txt_comp+"']")).isDisplayed();
         driver.findElement(By.xpath("//td[text()='Designation:']/following::td[1][text()='"+txt_position+"']")).isDisplayed();
     }
+
+    public void search (String txt_comp)
+    {
+        search.sendKeys(txt_comp);
+    }
+
+    public void srcclick()
+    {
+        searchclick.click();
+    }
+
+    public void selectbox()
+    {
+        checkbox.click();
+    }
+
+    public void entrydelete()
+    {
+        delete.click();
+    }
+
 }
