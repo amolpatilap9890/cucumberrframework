@@ -61,9 +61,9 @@ public class leadsteps extends basesteps{
         hp.clicklogout();
     }
 
-   @Then("close browser")
-   public void quite()
-   {
-       driver.quit();
-   }
+//    @Then("close browser")
+//    public void quite()
+//    {
+//        driver.quit();
+//    }
 }
